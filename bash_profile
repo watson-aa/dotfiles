@@ -16,7 +16,9 @@ SESSIND=(☠ ☕ ⚡ ⚰ ☢ ☘ ☔ ⚓ 😀 😈 😎 😡 😱 😸 😾 🙈
 
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
-export PS1="${SESSIND[$RANDOM % ${#SESSIND[@]}]}  \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] ➤ "
+export ICON="${SESSIND[$RANDOM % ${#SESSIND[@]}]}"
+export PS1="$ICON  \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] ➤ "
+echo -ne "\033]0;$ICON\007"
 
 # hard clear 'cls' command
 alias cls='printf "\33c\e[3J"'
