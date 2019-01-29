@@ -23,7 +23,7 @@ echo -ne "\033]0;$ICON\007"
 # hard clear 'cls' command
 alias cls='printf "\33c\e[3J"'
 
-# all your histories are belong to us...
+# all your history are belong to us...
 # Avoid duplicates
 export HISTCONTROL=ignoredups:erasedups  
 # When the shell exits, append to the history file instead of overwriting it
