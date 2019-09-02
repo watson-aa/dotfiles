@@ -34,3 +34,11 @@ for file in $files; do
    fi
 done
 
+# install git-aware-prompt
+echo "Installing git-aware-prompt"
+mkdir ~/.bash
+cd ~/.bash
+git clone git://github.com/jimeh/git-aware-prompt.git
+
+cd ~
+source ~/.bash_profile
