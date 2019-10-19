@@ -1,16 +1,3 @@
-
-# added by Miniconda2 3.18.3 installer
-export PATH="/Users/Shared/flutter/bin:/Users/guacw5/miniconda2/bin:$PATH"
-
-export NVM_DIR="/Users/guacw5/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-###-tns-completion-start-###
-if [ -f /Users/guacw5/.tnsrc ]; then 
-    source /Users/guacw5/.tnsrc 
-fi
-###-tns-completion-end-###
-
 # https://github.com/jimeh/git-aware-prompt
 SESSIND=(☠ ☕ ⚡ ⚰ ☢ ☘ ☔ ⚓ 😀 😈 😎 😡 😱 😸 😾 🙈 🙉 🙊 ✨ 🚀 🚌 🚑 🚒 🚓 🚕 🚗 🚙 🚚 🚬 🚲 🚶 🚽 🛀 🆘 🆙 ⌛ ⏰ ⚽ ⛄ ⛅ ⛔ ⛵ ⛺ ⭐ ⭕ 🌀 🌂 🌄 🌅 🌈 🌊 🌏 🌙 🌛 🌱 🌵 🌷 🌸 🌻 🌽 🌿 🍁 🍄 🍃 🍅 🍆 🍇 🍉 🍊 🍌 🍍 🍏 🍒 🍔 🍕 🍗 🍤 🍦 🍩 🍪 🍰 🍴 🍸 🍺 🎨 🎭 🎯 🎲 🎷 🎸 🎺 🎻 🏀 🏁 🏆 🏈 🏠 🐌 🐍 🐎 🐑 🐒 🐔 🐗 🐘 🐙 🐛 🐝 🐞 🐟 🐢 🐥 🐨 🐫 🐬 🐯 🐰 🐳 🐴 🐵 🐶 🐷 🐸 🐻 🐼 🐽 👀 👊 👑 👓 👹 👻 👽 💀 💊 💎 💣 💦 💩 💰 💸 💾 📌 📎 📡 📺 🔔 🔥 🔨 🔱 🔴 🔵 🔶 🔷 🚦 🚴 🐀 🐄 🐇 🐋 🐓 🐖 🔆 )
 
@@ -31,8 +18,5 @@ shopt -s histappend
 # After each command, append to the history file and reread it
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-export DYLD_LIBRARY_PATH='/Developer/NVIDIA/CuDNN-7.5.0.56/lib':$DYLD_LIBRARY_PATH
-export DYLD_LIBRARY_PATH='/usr/local/cuda/lib/':$DYLD_LIBRARY_PATH
 export PYTHONPATH='/usr/local/Cellar/caffe/1.0_9/python/':$PYTHONPATH
 
-eval $(thefuck --alias)
