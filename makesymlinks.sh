@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 ############################
 # .make.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
@@ -8,7 +8,7 @@
 
 dir=$HOME/dotfiles                    # dotfiles directory
 olddir=$HOME/dotfiles_old             # old dotfiles backup directory
-files="bash_profile vim vimrc"    # list of files/folders to symlink in homedir
+files="zshenv vim vimrc"    	      # list of files/folders to symlink in homedir
 
 ##########
 
@@ -36,9 +36,9 @@ done
 
 # install git-aware-prompt
 echo "Installing git-aware-prompt"
-mkdir ~/.bash
-cd ~/.bash
+mkdir ~/.zsh
+cd ~/.zsh
 git clone git://github.com/jimeh/git-aware-prompt.git
 
 cd ~
-source ~/.bash_profile
+source ~/.zshenv
