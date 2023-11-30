@@ -8,7 +8,7 @@
 
 dir=$HOME/dotfiles                    # dotfiles directory
 olddir=$HOME/dotfiles_old             # old dotfiles backup directory
-files="zshenv vim vimrc"    	      # list of files/folders to symlink in homedir
+files=(zshrc vim vimrc)    	      # list of files/folders to symlink in homedir
 
 ##########
 
@@ -23,7 +23,7 @@ cd $dir
 echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
-for file in $files; do
+for file ($files); do
     if [[ -L "$HOME/.$file" ]]; then
         echo "$HOME/.$file is already a symlink"
     else
@@ -35,10 +35,12 @@ for file in $files; do
 done
 
 # install git-aware-prompt
-echo "Installing git-aware-prompt"
-mkdir ~/.zsh
-cd ~/.zsh
-git clone git://github.com/jimeh/git-aware-prompt.git
+if [ ! -d ${"~/.zsh/"} ]; then
+    echo "Installing git-aware-prompt"
+    mkdir ~/.zsh
+    cd ~/.zsh
+    git clone https://github.com/jimeh/git-aware-prompt.git
+fi
 
 cd ~
-source ~/.zshenv
+source ~/.zshrc
