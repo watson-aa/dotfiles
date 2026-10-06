@@ -35,12 +35,12 @@ for file ($files); do
 done
 
 # install git-aware-prompt
-if [ ! -d ${"~/.zsh/"} ]; then
-    echo "Installing git-aware-prompt"
-    mkdir ~/.zsh
-    cd ~/.zsh
-    git clone https://github.com/jimeh/git-aware-prompt.git
-fi
+#if [ ! -d ${"~/.zsh/"} ]; then
+#    echo "Installing git-aware-prompt"
+#    mkdir ~/.zsh
+#    cd ~/.zsh
+#    git clone https://github.com/jimeh/git-aware-prompt.git
+#fi
 
 cd ~
 source ~/.zshrc

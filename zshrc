@@ -10,7 +10,7 @@ setopt prompt_subst
 add-zsh-hook precmd vcs_info
 # add ${vcs_info_msg_0} to the prompt
 # e.g. here we add the Git information in red  
-PROMPT='$ICON %1~ %F{red}${vcs_info_msg_0_}%f %# '
+PROMPT='$ICON %F{green}%1~ %F{red}${vcs_info_msg_0_}%f %F{green}%# '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
@@ -20,18 +20,18 @@ zstyle ':vcs_info:*' stagedstr ' +'
 # Set the format of the Git information for vcs_info
 zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
-#export JAVA_HOME=/opt/jdk/sapmachine-jdk-19.jdk/Contents/Home
-#export PATH="/opt/jdk/sapmachine-jdk-11.0.16.1.jdk/Contents/Home/bin:$PATH"
-export PATH="/Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/MacOs/bin/:$PATH"
+# MacOS color
+export CLICOLOR=1
+export LSCOLORS=cxfxexdxbxegedabagacad
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"
+# Android stuff
+export ANDROID_HOME='/Users/aaron.watson/Library/Android/sdk'
+export ANDROID_SDK_ROOT='/Users/aaron.watson/Library/Android/sdk'
+export JAVA_HOME='/Users/aaron.watson/Library/Developer/Android/jdk/jdk-21'
 
-export PATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
+# Pyenv initialization
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
-export ANDROID_HOME=/Users/$USER/Library/Android/sdk
-export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
-export DOCKER_HOST=tcp://docker-machine.local:2375
